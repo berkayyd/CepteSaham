@@ -61,6 +61,3 @@ fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
 
-# Firebase
-GoogleService-Info.plist
-CepteSaham.xcodeproj/xcuserdata/berkay.xcuserdatad/xcschemes/xcschememanagement.plist
