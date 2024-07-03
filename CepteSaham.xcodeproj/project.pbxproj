@@ -18,6 +18,7 @@
 		F0704E032C35B6EE0017AE39 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F0704E022C35B6EE0017AE39 /* FirebaseAnalyticsSwift */; };
 		F0704E052C35B6EE0017AE39 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = F0704E042C35B6EE0017AE39 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		F0704E072C35B6EE0017AE39 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = F0704E062C35B6EE0017AE39 /* FirebaseAppCheck */; };
+		F0704E0E2C35C2590017AE39 /* Big_Shoulders_Display in Resources */ = {isa = PBXBuildFile; fileRef = F0704E0D2C35C2590017AE39 /* Big_Shoulders_Display */; };
 		F0AC11682C31B9CC0043C7A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0AC11672C31B9CC0043C7A4 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		F058C1482C31B84500D127C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F058C14B2C31B84500D127C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F058C14D2C31B84500D127C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0704E0D2C35C2590017AE39 /* Big_Shoulders_Display */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Big_Shoulders_Display; sourceTree = "<group>"; };
 		F0AC11672C31B9CC0043C7A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +70,7 @@
 		F058C13E2C31B84400D127C0 /* CepteSaham */ = {
 			isa = PBXGroup;
 			children = (
+				F0704E0D2C35C2590017AE39 /* Big_Shoulders_Display */,
 				F058C13F2C31B84400D127C0 /* AppDelegate.swift */,
 				F058C1412C31B84400D127C0 /* SceneDelegate.swift */,
 				F058C1432C31B84400D127C0 /* ViewController.swift */,
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F058C1492C31B84500D127C0 /* Assets.xcassets in Resources */,
+				F0704E0E2C35C2590017AE39 /* Big_Shoulders_Display in Resources */,
 				F0AC11682C31B9CC0043C7A4 /* GoogleService-Info.plist in Resources */,
 				F058C14C2C31B84500D127C0 /* Base in Resources */,
 				F058C1472C31B84400D127C0 /* Base in Resources */,

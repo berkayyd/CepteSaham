@@ -17,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         Thread.sleep(forTimeInterval: 3)
+        
+        UIFont.familyNames.forEach { name in
+            for font_name in UIFont.fontNames(forFamilyName: name){
+                print("\n\(font_name)")
+            }
+        }
         return true
     }
 
