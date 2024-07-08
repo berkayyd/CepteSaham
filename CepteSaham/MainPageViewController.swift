@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +74,7 @@ class ViewController: UIViewController {
         
         // Business Entry Button
         let businessButton = createButton(title: "İşletme Girişi", backgroundColor: UIColor(hex: "#154B2D"))
+        businessButton.addTarget(self, action: #selector(navigateToLogin), for: .touchUpInside)
         view.addSubview(businessButton)
             
         NSLayoutConstraint.activate([
@@ -113,6 +114,11 @@ class ViewController: UIViewController {
         button.layer.cornerRadius = 15
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
+    }
+    
+    @objc private func navigateToLogin() {
+        let loginVC = LoginViewController()
+        present(loginVC, animated: true, completion: nil)
     }
 
 }
