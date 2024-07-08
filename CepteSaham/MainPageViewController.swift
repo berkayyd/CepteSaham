@@ -117,9 +117,12 @@ class MainPageViewController: UIViewController {
     }
     
     @objc private func navigateToLogin() {
-        let loginVC = LoginViewController()
-        present(loginVC, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
+            present(loginVC, animated: true, completion: nil)
+        }
     }
+
 
 }
 

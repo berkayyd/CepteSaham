@@ -14,6 +14,9 @@
 		F058C1492C31B84500D127C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F058C1482C31B84500D127C0 /* Assets.xcassets */; };
 		F058C14C2C31B84500D127C0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F058C14B2C31B84500D127C0 /* Base */; };
 		F0704E0E2C35C2590017AE39 /* Big_Shoulders_Display in Resources */ = {isa = PBXBuildFile; fileRef = F0704E0D2C35C2590017AE39 /* Big_Shoulders_Display */; };
+		F071AC422C3C853400690791 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071AC412C3C853400690791 /* PrimaryButton.swift */; };
+		F071AC442C3CA2FA00690791 /* RangeGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071AC432C3CA2FA00690791 /* RangeGestureRecognizer.swift */; };
+		F0A7FCDD2C3C7A1A004C360A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A7FCDC2C3C7A1A004C360A /* CustomTextField.swift */; };
 		F0AC11682C31B9CC0043C7A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0AC11672C31B9CC0043C7A4 /* GoogleService-Info.plist */; };
 		F0E622742C3731840054B0F3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F0E622732C3731840054B0F3 /* FirebaseAnalytics */; };
 		F0E622762C3731840054B0F3 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = F0E622752C3731840054B0F3 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -21,6 +24,7 @@
 		F0E6227A2C3731840054B0F3 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = F0E622792C3731840054B0F3 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		F0E6227C2C3731840054B0F3 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = F0E6227B2C3731840054B0F3 /* FirebaseAppCheck */; };
 		F0E6227E2C37344D0054B0F3 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6227D2C37344D0054B0F3 /* LoginPageViewController.swift */; };
+		F0E93F5E2C3C70C80069EE39 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E93F5D2C3C70C80069EE39 /* CustomLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +37,12 @@
 		F058C14B2C31B84500D127C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F058C14D2C31B84500D127C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0704E0D2C35C2590017AE39 /* Big_Shoulders_Display */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Big_Shoulders_Display; sourceTree = "<group>"; };
+		F071AC412C3C853400690791 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		F071AC432C3CA2FA00690791 /* RangeGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeGestureRecognizer.swift; sourceTree = "<group>"; };
+		F0A7FCDC2C3C7A1A004C360A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		F0AC11672C31B9CC0043C7A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F0E6227D2C37344D0054B0F3 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		F0E93F5D2C3C70C80069EE39 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 		F058C13E2C31B84400D127C0 /* CepteSaham */ = {
 			isa = PBXGroup;
 			children = (
+				F0E93F5A2C3C6F9C0069EE39 /* Custom */,
 				F0E622712C372B3A0054B0F3 /* font */,
 				F058C13F2C31B84400D127C0 /* AppDelegate.swift */,
 				F058C1412C31B84400D127C0 /* SceneDelegate.swift */,
@@ -82,8 +91,17 @@
 				F058C14A2C31B84500D127C0 /* LaunchScreen.storyboard */,
 				F058C14D2C31B84500D127C0 /* Info.plist */,
 				F0AC11672C31B9CC0043C7A4 /* GoogleService-Info.plist */,
+				F071AC432C3CA2FA00690791 /* RangeGestureRecognizer.swift */,
 			);
 			path = CepteSaham;
+			sourceTree = "<group>";
+		};
+		F071AC402C3C851F00690791 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				F071AC412C3C853400690791 /* PrimaryButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		F0E622712C372B3A0054B0F3 /* font */ = {
@@ -92,6 +110,16 @@
 				F0704E0D2C35C2590017AE39 /* Big_Shoulders_Display */,
 			);
 			path = font;
+			sourceTree = "<group>";
+		};
+		F0E93F5A2C3C6F9C0069EE39 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				F071AC402C3C851F00690791 /* Buttons */,
+				F0E93F5D2C3C70C80069EE39 /* CustomLabel.swift */,
+				F0A7FCDC2C3C7A1A004C360A /* CustomTextField.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,7 +206,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F058C1442C31B84400D127C0 /* MainPageViewController.swift in Sources */,
+				F0E93F5E2C3C70C80069EE39 /* CustomLabel.swift in Sources */,
+				F0A7FCDD2C3C7A1A004C360A /* CustomTextField.swift in Sources */,
+				F071AC442C3CA2FA00690791 /* RangeGestureRecognizer.swift in Sources */,
 				F0E6227E2C37344D0054B0F3 /* LoginPageViewController.swift in Sources */,
+				F071AC422C3C853400690791 /* PrimaryButton.swift in Sources */,
 				F058C1402C31B84400D127C0 /* AppDelegate.swift in Sources */,
 				F058C1422C31B84400D127C0 /* SceneDelegate.swift in Sources */,
 			);
