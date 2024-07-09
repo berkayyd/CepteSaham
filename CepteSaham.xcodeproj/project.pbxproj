@@ -91,12 +91,12 @@
 				F058C1432C31B84400D127C0 /* MainPageViewController.swift */,
 				F0E6227D2C37344D0054B0F3 /* LoginPageViewController.swift */,
 				F0DEADEC2C3D484100E71D79 /* RegisterViewController.swift */,
+				F0DEADEE2C3D708400E71D79 /* SplashScreenViewController.swift */,
 				F058C1452C31B84400D127C0 /* Main.storyboard */,
 				F058C1482C31B84500D127C0 /* Assets.xcassets */,
 				F058C14A2C31B84500D127C0 /* LaunchScreen.storyboard */,
 				F058C14D2C31B84500D127C0 /* Info.plist */,
 				F0AC11672C31B9CC0043C7A4 /* GoogleService-Info.plist */,
-				F0DEADEE2C3D708400E71D79 /* SplashScreenViewController.swift */,
 			);
 			path = CepteSaham;
 			sourceTree = "<group>";

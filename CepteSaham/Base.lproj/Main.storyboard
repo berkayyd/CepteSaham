@@ -191,7 +191,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d30-ph-JzM">
-                                <rect key="frame" x="34" y="240" width="321" height="409"/>
+                                <rect key="frame" x="34" y="240" width="325.33333333333331" height="409"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="İsim" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GbE-Zl-dxo" customClass="CustomTextField" customModule="CepteSaham" customModuleProvider="target">
                                         <rect key="frame" x="8" y="23" width="148" height="55"/>
@@ -203,12 +203,12 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Soyisim" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ep-cB-YRN" customClass="CustomTextField" customModule="CepteSaham" customModuleProvider="target">
-                                        <rect key="frame" x="164" y="23" width="148" height="55"/>
+                                        <rect key="frame" x="164" y="23" width="152.33333333333337" height="55"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tbg-xU-WNw" customClass="CustomTextField" customModule="CepteSaham" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="100" width="304" height="55"/>
+                                        <rect key="frame" x="8" y="100" width="308.33333333333331" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="HkO-5P-jOv"/>
                                         </constraints>
@@ -216,7 +216,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JoD-nJ-hE1" customClass="CustomTextField" customModule="CepteSaham" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="186" width="304" height="55"/>
+                                        <rect key="frame" x="8" y="186" width="308.33333333333331" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="Uhs-kl-GZY"/>
                                         </constraints>
@@ -224,14 +224,14 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Şifreni Onayla" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0uV-N7-YjJ" customClass="CustomTextField" customModule="CepteSaham" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="267" width="304" height="55"/>
+                                        <rect key="frame" x="8" y="267" width="308.33333333333331" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="fo8-86-6M9"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYC-yc-ia8" customClass="PrimaryButton" customModule="CepteSaham" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYC-yc-ia8" customClass="PrimaryButton" customModule="CepteSaham" customModuleProvider="target">
                                         <rect key="frame" x="8" y="349" width="309" height="55"/>
                                         <fontDescription key="fontDescription" name="BigShouldersDisplay-Bold" family="Big Shoulders Display" pointSize="26"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -289,13 +289,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zaten hesabın var mı? Giriş Yap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCG-ud-KhX">
-                                <rect key="frame" x="71" y="663" width="247" height="21"/>
+                                <rect key="frame" x="71.000000000000014" y="663" width="251.33333333333337" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball" translatesAutoresizingMaskIntoConstraints="NO" id="M86-B6-W0S">
-                                <rect key="frame" x="257.66666666666669" y="184" width="35.666666666666686" height="36"/>
+                                <rect key="frame" x="262" y="184" width="35.333333333333314" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35.333333333333314" id="K92-Ur-yVY"/>
                                 </constraints>
@@ -338,8 +338,14 @@
         <designable name="0uV-N7-YjJ">
             <size key="intrinsicContentSize" width="127.33333333333333" height="28.666666666666668"/>
         </designable>
+        <designable name="7ep-cB-YRN">
+            <size key="intrinsicContentSize" width="88" height="28.666666666666668"/>
+        </designable>
         <designable name="F0D-Hg-s86">
             <size key="intrinsicContentSize" width="78.666666666666671" height="32"/>
+        </designable>
+        <designable name="GbE-Zl-dxo">
+            <size key="intrinsicContentSize" width="64.333333333333329" height="28.666666666666668"/>
         </designable>
         <designable name="Huq-vf-Qix">
             <size key="intrinsicContentSize" width="104" height="43"/>
