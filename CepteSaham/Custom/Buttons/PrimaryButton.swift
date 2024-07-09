@@ -39,5 +39,7 @@ class PrimaryButton: UIButton {
         self.layer.cornerRadius = cornerRadius
         self.backgroundColor = UIColor(hex: backgroundColorHex)
         self.tintColor = titleColor
+        self.setTitleColor(titleColor, for: .normal)
+        self.titleLabel?.font = UIFont(name: "BigShouldersDisplay-ExtraBold", size: 20)
     }
 }

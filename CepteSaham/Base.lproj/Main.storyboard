@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TMh-Nt-AMC">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -8,10 +8,43 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Splash Screen View Controller-->
+        <scene sceneID="tuW-e3-cLh">
+            <objects>
+                <viewController id="TMh-Nt-AMC" customClass="SplashScreenViewController" customModule="CepteSaham" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n5g-lK-JZf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball" translatesAutoresizingMaskIntoConstraints="NO" id="14d-EN-c1t">
+                                <rect key="frame" x="146.66666666666666" y="194" width="100" height="100"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cepteSaham" translatesAutoresizingMaskIntoConstraints="NO" id="zKI-eg-dEv">
+                                <rect key="frame" x="38" y="294" width="317" height="108"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jCf-up-err"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zKI-eg-dEv" firstAttribute="centerX" secondItem="n5g-lK-JZf" secondAttribute="centerX" id="A5S-gn-Xmu"/>
+                            <constraint firstItem="14d-EN-c1t" firstAttribute="top" secondItem="jCf-up-err" secondAttribute="top" constant="135" id="DC8-kL-pdp"/>
+                            <constraint firstItem="14d-EN-c1t" firstAttribute="centerX" secondItem="n5g-lK-JZf" secondAttribute="centerX" id="KcF-S1-BQ8"/>
+                            <constraint firstItem="zKI-eg-dEv" firstAttribute="top" secondItem="14d-EN-c1t" secondAttribute="bottom" id="g1g-u4-kLW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ballImageView" destination="14d-EN-c1t" id="KQI-EL-8AI"/>
+                        <outlet property="textImageView" destination="zKI-eg-dEv" id="UHH-2i-7hs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s05-TH-ouc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-251.14503816793894" y="-59.154929577464792"/>
+        </scene>
         <!--Main Page View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainPageViewController" customModule="CepteSaham" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainPageViewController" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="MainPageViewController" customModule="CepteSaham" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,62 +108,43 @@
                                         <attributedString key="attributedText"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59R-LF-fPw">
-                                        <rect key="frame" x="186" y="164" width="148" height="35"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Şifremi Unuttum"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Huq-vf-Qix" customClass="PrimaryButton" customModule="CepteSaham" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Huq-vf-Qix" customClass="PrimaryButton" customModule="CepteSaham" customModuleProvider="target">
                                         <rect key="frame" x="17" y="229" width="308" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="Zio-jl-bsD"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="BigShouldersDisplay-Bold" family="Big Shoulders Display" pointSize="26"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Giriş Yap">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="26" name="BigShouldersDisplay-Bold"/>
-                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <state key="normal" title="Giriş Yap">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Giriş Yap">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="26" name="BigShouldersDisplay-Bold"/>
-                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontFamily" value="BigShouldersDisplay-Bold"/>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hesabın yok mu? Kaydol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eac-mw-r5o">
-                                        <rect key="frame" x="76" y="317" width="191" height="21"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hesabın yok mu? Kaydol" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eac-mw-r5o">
+                                        <rect key="frame" x="76" y="316" width="191" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59R-LF-fPw">
+                                        <rect key="frame" x="213" y="164" width="112" height="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Şifremi Unuttum"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
                                     <constraint firstItem="Eac-mw-r5o" firstAttribute="leading" secondItem="FJH-u0-u9Z" secondAttribute="leading" constant="76" id="4g1-Tw-VUp"/>
                                     <constraint firstItem="F0D-Hg-s86" firstAttribute="leading" secondItem="FJH-u0-u9Z" secondAttribute="leading" constant="17" id="DGh-KV-mtm"/>
                                     <constraint firstItem="F0D-Hg-s86" firstAttribute="trailing" secondItem="tZw-nI-x5h" secondAttribute="trailing" id="HYG-FU-0qd"/>
-                                    <constraint firstItem="Huq-vf-Qix" firstAttribute="top" secondItem="59R-LF-fPw" secondAttribute="bottom" constant="30" id="KHp-bF-jMo"/>
+                                    <constraint firstItem="Huq-vf-Qix" firstAttribute="top" secondItem="59R-LF-fPw" secondAttribute="bottom" constant="35" id="KHp-bF-jMo"/>
                                     <constraint firstItem="F0D-Hg-s86" firstAttribute="centerX" secondItem="FJH-u0-u9Z" secondAttribute="centerX" id="MYB-7a-6m4"/>
-                                    <constraint firstItem="Eac-mw-r5o" firstAttribute="top" secondItem="Huq-vf-Qix" secondAttribute="bottom" constant="33" id="Ohb-pO-G21"/>
+                                    <constraint firstItem="Eac-mw-r5o" firstAttribute="top" secondItem="Huq-vf-Qix" secondAttribute="bottom" constant="32" id="Ohb-pO-G21"/>
                                     <constraint firstItem="Eac-mw-r5o" firstAttribute="centerX" secondItem="Huq-vf-Qix" secondAttribute="centerX" id="P84-Ja-Uon"/>
                                     <constraint firstItem="Huq-vf-Qix" firstAttribute="trailing" secondItem="tZw-nI-x5h" secondAttribute="trailing" id="QAd-cN-KEz"/>
-                                    <constraint firstItem="59R-LF-fPw" firstAttribute="trailing" secondItem="FJH-u0-u9Z" secondAttribute="trailingMargin" constant="-1" id="XAE-bn-JXo"/>
+                                    <constraint firstItem="59R-LF-fPw" firstAttribute="trailing" secondItem="FJH-u0-u9Z" secondAttribute="trailingMargin" constant="-10" id="XAE-bn-JXo"/>
                                     <constraint firstItem="tZw-nI-x5h" firstAttribute="top" secondItem="F0D-Hg-s86" secondAttribute="bottom" constant="24" id="bak-75-Aao"/>
                                     <constraint firstItem="Huq-vf-Qix" firstAttribute="leading" secondItem="tZw-nI-x5h" secondAttribute="leading" id="edX-rE-1s0"/>
                                     <constraint firstItem="F0D-Hg-s86" firstAttribute="top" secondItem="FJH-u0-u9Z" secondAttribute="top" constant="22" id="fPX-bP-zey"/>
@@ -166,15 +180,178 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HPR-SG-mFZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1408.3969465648854" y="-59.154929577464792"/>
+            <point key="canvasLocation" x="1488" y="-59"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="syP-TA-489">
+            <objects>
+                <viewController storyboardIdentifier="RegisterViewController" modalPresentationStyle="fullScreen" id="0TI-rt-cje" customClass="RegisterViewController" customModule="CepteSaham" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k4g-WE-0p2">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d30-ph-JzM">
+                                <rect key="frame" x="34" y="240" width="321" height="409"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="İsim" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GbE-Zl-dxo" customClass="CustomTextField" customModule="CepteSaham" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="23" width="148" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="148" id="Nkd-xg-Wkd"/>
+                                            <constraint firstAttribute="height" constant="55" id="og4-TI-uwR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Soyisim" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ep-cB-YRN" customClass="CustomTextField" customModule="CepteSaham" customModuleProvider="target">
+                                        <rect key="frame" x="164" y="23" width="148" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tbg-xU-WNw" customClass="CustomTextField" customModule="CepteSaham" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="100" width="304" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="HkO-5P-jOv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JoD-nJ-hE1" customClass="CustomTextField" customModule="CepteSaham" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="186" width="304" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="Uhs-kl-GZY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Şifreni Onayla" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0uV-N7-YjJ" customClass="CustomTextField" customModule="CepteSaham" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="267" width="304" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="fo8-86-6M9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYC-yc-ia8" customClass="PrimaryButton" customModule="CepteSaham" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="349" width="309" height="55"/>
+                                        <fontDescription key="fontDescription" name="BigShouldersDisplay-Bold" family="Big Shoulders Display" pointSize="26"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Kayıt Ol">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamily" value="BigShouldersDisplay-Bold"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstItem="0uV-N7-YjJ" firstAttribute="leading" secondItem="qYC-yc-ia8" secondAttribute="leading" id="3BW-fI-MAS"/>
+                                    <constraint firstItem="qYC-yc-ia8" firstAttribute="top" secondItem="0uV-N7-YjJ" secondAttribute="bottom" constant="27" id="6fb-m8-zM8"/>
+                                    <constraint firstAttribute="trailing" secondItem="7ep-cB-YRN" secondAttribute="trailing" constant="9" id="7kG-Jd-gfM"/>
+                                    <constraint firstItem="GbE-Zl-dxo" firstAttribute="leading" secondItem="Tbg-xU-WNw" secondAttribute="leading" id="GTa-hn-eIR"/>
+                                    <constraint firstItem="0uV-N7-YjJ" firstAttribute="centerX" secondItem="qYC-yc-ia8" secondAttribute="centerX" id="IfO-3H-7Uk"/>
+                                    <constraint firstItem="GbE-Zl-dxo" firstAttribute="bottom" secondItem="7ep-cB-YRN" secondAttribute="bottom" id="SgL-jP-hUL"/>
+                                    <constraint firstItem="Tbg-xU-WNw" firstAttribute="trailing" secondItem="JoD-nJ-hE1" secondAttribute="trailing" id="UB7-vq-nOm"/>
+                                    <constraint firstItem="GbE-Zl-dxo" firstAttribute="top" secondItem="7ep-cB-YRN" secondAttribute="top" id="VZb-Om-w3x"/>
+                                    <constraint firstItem="0uV-N7-YjJ" firstAttribute="top" secondItem="JoD-nJ-hE1" secondAttribute="bottom" constant="26" id="WEd-2X-azb"/>
+                                    <constraint firstItem="GbE-Zl-dxo" firstAttribute="leading" secondItem="d30-ph-JzM" secondAttribute="leadingMargin" id="WZy-X7-ih5"/>
+                                    <constraint firstItem="GbE-Zl-dxo" firstAttribute="top" secondItem="d30-ph-JzM" secondAttribute="top" constant="23" id="caK-Kd-yAm"/>
+                                    <constraint firstItem="JoD-nJ-hE1" firstAttribute="trailing" secondItem="0uV-N7-YjJ" secondAttribute="trailing" id="eif-zt-0a3"/>
+                                    <constraint firstItem="Tbg-xU-WNw" firstAttribute="top" secondItem="GbE-Zl-dxo" secondAttribute="bottom" constant="22" id="f91-Lv-4DT"/>
+                                    <constraint firstAttribute="bottom" secondItem="qYC-yc-ia8" secondAttribute="bottom" constant="5" id="kS7-fm-yue"/>
+                                    <constraint firstItem="7ep-cB-YRN" firstAttribute="trailing" secondItem="Tbg-xU-WNw" secondAttribute="trailing" id="kvl-EG-oGW"/>
+                                    <constraint firstItem="7ep-cB-YRN" firstAttribute="leading" secondItem="GbE-Zl-dxo" secondAttribute="trailing" constant="8" id="mVH-yi-Lr0"/>
+                                    <constraint firstItem="JoD-nJ-hE1" firstAttribute="leading" secondItem="0uV-N7-YjJ" secondAttribute="leading" id="npZ-Lf-u2j"/>
+                                    <constraint firstItem="Tbg-xU-WNw" firstAttribute="leading" secondItem="JoD-nJ-hE1" secondAttribute="leading" id="r6T-FM-olk"/>
+                                    <constraint firstItem="JoD-nJ-hE1" firstAttribute="top" secondItem="Tbg-xU-WNw" secondAttribute="bottom" constant="31" id="t62-cW-xdm"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball" translatesAutoresizingMaskIntoConstraints="NO" id="MzS-Vu-Cfs">
+                                <rect key="frame" x="96" y="184" width="35.333333333333343" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35.333333333333343" id="0fQ-Ni-CHX"/>
+                                    <constraint firstAttribute="height" constant="36" id="6R4-D7-xnn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3z-98-bof">
+                                <rect key="frame" x="132" y="179" width="129" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="M8S-04-Mz0"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Kayıt Ol">
+                                        <attributes>
+                                            <font key="NSFont" size="36" name="BigShouldersDisplay-ExtraBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zaten hesabın var mı? Giriş Yap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCG-ud-KhX">
+                                <rect key="frame" x="71" y="663" width="247" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball" translatesAutoresizingMaskIntoConstraints="NO" id="M86-B6-W0S">
+                                <rect key="frame" x="257.66666666666669" y="184" width="35.666666666666686" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35.333333333333314" id="K92-Ur-yVY"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="94p-Oj-RmS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MzS-Vu-Cfs" firstAttribute="top" secondItem="M86-B6-W0S" secondAttribute="top" id="713-Uo-tJc"/>
+                            <constraint firstItem="jCG-ud-KhX" firstAttribute="top" secondItem="d30-ph-JzM" secondAttribute="bottom" constant="14" id="9a6-7p-kAI"/>
+                            <constraint firstItem="d30-ph-JzM" firstAttribute="centerX" secondItem="jCG-ud-KhX" secondAttribute="centerX" id="H2D-G9-ysA"/>
+                            <constraint firstItem="94p-Oj-RmS" firstAttribute="trailing" secondItem="M86-B6-W0S" secondAttribute="trailing" constant="95.666666666666686" id="KUW-Xj-WbC"/>
+                            <constraint firstItem="H3z-98-bof" firstAttribute="top" secondItem="94p-Oj-RmS" secondAttribute="top" constant="120" id="OLF-hd-4eu"/>
+                            <constraint firstItem="MzS-Vu-Cfs" firstAttribute="leading" secondItem="94p-Oj-RmS" secondAttribute="leading" constant="96" id="Po4-aB-8Mj"/>
+                            <constraint firstItem="d30-ph-JzM" firstAttribute="top" secondItem="MzS-Vu-Cfs" secondAttribute="bottom" constant="20" id="RAZ-eE-iTb"/>
+                            <constraint firstItem="d30-ph-JzM" firstAttribute="leading" secondItem="94p-Oj-RmS" secondAttribute="leading" constant="34" id="U1T-u6-N1h"/>
+                            <constraint firstItem="MzS-Vu-Cfs" firstAttribute="top" secondItem="94p-Oj-RmS" secondAttribute="top" constant="125" id="UaN-Vs-aHH"/>
+                            <constraint firstItem="MzS-Vu-Cfs" firstAttribute="bottom" secondItem="M86-B6-W0S" secondAttribute="bottom" id="cJs-lI-3MD"/>
+                            <constraint firstItem="H3z-98-bof" firstAttribute="centerX" secondItem="k4g-WE-0p2" secondAttribute="centerX" id="d6L-7R-cps"/>
+                            <constraint firstItem="jCG-ud-KhX" firstAttribute="leading" secondItem="94p-Oj-RmS" secondAttribute="leading" constant="71" id="dFm-g8-hbd"/>
+                            <constraint firstItem="M86-B6-W0S" firstAttribute="leading" secondItem="H3z-98-bof" secondAttribute="trailing" id="kLe-Kc-cYt"/>
+                            <constraint firstItem="H3z-98-bof" firstAttribute="centerX" secondItem="d30-ph-JzM" secondAttribute="centerX" id="nt5-zl-N5E"/>
+                            <constraint firstItem="94p-Oj-RmS" firstAttribute="bottom" secondItem="jCG-ud-KhX" secondAttribute="bottom" constant="134" id="rQ1-Fg-Cd6"/>
+                            <constraint firstItem="H3z-98-bof" firstAttribute="leading" secondItem="MzS-Vu-Cfs" secondAttribute="trailing" id="vO8-FO-6D1"/>
+                            <constraint firstItem="H3z-98-bof" firstAttribute="centerY" secondItem="MzS-Vu-Cfs" secondAttribute="centerY" id="yFv-tY-NS4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="d30-ph-JzM" id="hBr-NC-p3b"/>
+                        <outlet property="loginLabel" destination="jCG-ud-KhX" id="8wK-CM-d5D"/>
+                        <outlet property="saveBtn" destination="qYC-yc-ia8" id="uwQ-OD-1PZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10R-K5-Vjm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2350.3816793893129" y="-59.154929577464792"/>
         </scene>
     </scenes>
     <designables>
+        <designable name="0uV-N7-YjJ">
+            <size key="intrinsicContentSize" width="127.33333333333333" height="28.666666666666668"/>
+        </designable>
         <designable name="F0D-Hg-s86">
             <size key="intrinsicContentSize" width="78.666666666666671" height="32"/>
         </designable>
         <designable name="Huq-vf-Qix">
-            <size key="intrinsicContentSize" width="128" height="44.666666666666664"/>
+            <size key="intrinsicContentSize" width="104" height="43"/>
+        </designable>
+        <designable name="JoD-nJ-hE1">
+            <size key="intrinsicContentSize" width="68" height="28.666666666666668"/>
+        </designable>
+        <designable name="Tbg-xU-WNw">
+            <size key="intrinsicContentSize" width="72.666666666666671" height="28.666666666666668"/>
+        </designable>
+        <designable name="qYC-yc-ia8">
+            <size key="intrinsicContentSize" width="92" height="43"/>
         </designable>
         <designable name="tZw-nI-x5h">
             <size key="intrinsicContentSize" width="73" height="32"/>
@@ -182,11 +359,15 @@
     </designables>
     <resources>
         <image name="ball" width="100" height="100"/>
+        <image name="cepteSaham" width="317" height="108"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

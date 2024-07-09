@@ -6,6 +6,7 @@
 	<array>
 		<string>Big_Shoulders_Display/static/BigShouldersDisplay-ExtraBold.ttf</string>
 		<string>Big_Shoulders_Display/static/BigShouldersDisplay-Regular.ttf</string>
+		<string>Big_Shoulders_Display/static/BigShouldersDisplay-Bold.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

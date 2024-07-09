@@ -31,10 +31,20 @@ class LoginViewController: UIViewController {
         loginBtn.layer.shadowRadius = 4
         loginBtn.layer.masksToBounds = false
         
+        registerLabel.font = UIFont(name: "BigShouldersDisplay-Regular", size: 16)
         registerLabel.addRangeGesture(stringRange: "Kaydol") {
             print("button tapped")
         }
         
+        loginBtn.addTarget(self, action: #selector(navigateToRegister), for: .touchUpInside)
+        
+    }
+    
+    @objc private func navigateToRegister() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let registerVC = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController {
+            present(registerVC, animated: true, completion: nil)
+        }
     }
     
 }

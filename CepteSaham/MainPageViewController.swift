@@ -74,6 +74,7 @@ class MainPageViewController: UIViewController {
         
         // Business Entry Button
         let businessButton = createButton(title: "İşletme Girişi", backgroundColor: UIColor(hex: "#154B2D"))
+        businessButton.titleLabel?.font = UIFont(name: "BigShouldersDisplay-Bold", size: 17)
         businessButton.addTarget(self, action: #selector(navigateToLogin), for: .touchUpInside)
         view.addSubview(businessButton)
             
@@ -86,6 +87,7 @@ class MainPageViewController: UIViewController {
                
         // User Entry Button
         let userButton = createButton(title: "Kullanıcı Girişi", backgroundColor: UIColor(hex: "#154B2D"))
+        userButton.titleLabel?.font = UIFont(name: "BigShouldersDisplay-Bold", size: 17)
         view.addSubview(userButton)
             
         NSLayoutConstraint.activate([
@@ -97,6 +99,7 @@ class MainPageViewController: UIViewController {
                
         // Guest Entry Button
         let guestButton = createButton(title: "Misafir Girişi", backgroundColor: UIColor(hex: "#4E9041"))
+        guestButton.titleLabel?.font = UIFont(name: "BigShouldersDisplay-Bold", size: 17)
         view.addSubview(guestButton)
                
         NSLayoutConstraint.activate([
