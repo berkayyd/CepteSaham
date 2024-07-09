@@ -1,18 +1,16 @@
-//
-//  RegisterViewController.swift
-//  CepteSaham
-//
-//  Created by Berkay Demir on 9.07.2024.
-//
-
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
 
+    
+    @IBOutlet weak var nameTextField: CustomTextField!
+    @IBOutlet weak var surnameTextField: CustomTextField!
     @IBOutlet weak var containerView: UIView!
-    
+    @IBOutlet weak var emailTextField: CustomTextField!
     @IBOutlet weak var saveBtn: PrimaryButton!
-    
+    @IBOutlet weak var passwordTextField: CustomTextField!
+    @IBOutlet weak var confirmPasswordTextField: CustomTextField!
     @IBOutlet weak var loginLabel: UILabel!
     
     override func viewDidLoad() {
@@ -35,7 +33,61 @@ class RegisterViewController: UIViewController {
         
         loginLabel.font = UIFont(name: "BigShouldersDisplay-Regular", size: 16)
         loginLabel.addRangeGesture(stringRange: "Giriş Yap") {
-            print("button tapped")
+            self.navigateToLogin()
         }
+    }
+    
+    @IBAction func saveBtnTapped(_ sender: UIButton) {
+        
+        guard let name = nameTextField.text, !name.isEmpty ,
+        let surname = surnameTextField.text, !surname.isEmpty else {
+            showAlert(message: "Please enter your name and surname")
+            return
+        }
+        
+        guard let email = emailTextField.text, !email.isEmpty else {
+            showAlert(message: "Please enter your email.")
+            return
+        }
+            
+        guard let password = passwordTextField.text, !password.isEmpty, let passwordAgain = confirmPasswordTextField.text, !passwordAgain.isEmpty else {
+            showAlert(message: "Please enter your password.")
+            return
+        }
+        
+        if passwordTextField.text != confirmPasswordTextField.text {
+            showAlert(message: "Passwords should match")
+            return
+        }
+            
+        // Call Firebase authentication to create a new user with email and password
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] authResult, error in
+            guard let self = self else { return }
+            
+            if let error = error {
+                self.showAlert(message: "Failed to create user: \(error.localizedDescription)")
+                return
+            }
+            
+            // User successfully created
+            if let user = authResult?.user {
+                print("User created with email: \(user.email ?? "Unknown email")")
+                // Optionally, you can navigate to the login screen after successful registration
+                self.navigateToLogin()
+            }
+        }
+    }
+
+    @objc private func navigateToLogin() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
+            present(loginVC, animated: true, completion: nil)
+        }
+    }
+    
+    private func showAlert(message: String) {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }

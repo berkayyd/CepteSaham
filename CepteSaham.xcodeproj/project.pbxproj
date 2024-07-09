@@ -20,6 +20,9 @@
 		F0AC11682C31B9CC0043C7A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0AC11672C31B9CC0043C7A4 /* GoogleService-Info.plist */; };
 		F0DEADED2C3D484100E71D79 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DEADEC2C3D484100E71D79 /* RegisterViewController.swift */; };
 		F0DEADEF2C3D708400E71D79 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DEADEE2C3D708400E71D79 /* SplashScreenViewController.swift */; };
+		F0DEADF12C3DB22D00E71D79 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DEADF02C3DB22D00E71D79 /* AuthService.swift */; };
+		F0DEADF42C3DB27B00E71D79 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F0DEADF32C3DB27B00E71D79 /* FirebaseAuth */; };
+		F0DEADF62C3DB4DB00E71D79 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DEADF52C3DB4DB00E71D79 /* HomePageViewController.swift */; };
 		F0E622742C3731840054B0F3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F0E622732C3731840054B0F3 /* FirebaseAnalytics */; };
 		F0E622762C3731840054B0F3 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = F0E622752C3731840054B0F3 /* FirebaseAnalyticsOnDeviceConversion */; };
 		F0E622782C3731840054B0F3 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F0E622772C3731840054B0F3 /* FirebaseAnalyticsSwift */; };
@@ -45,6 +48,8 @@
 		F0AC11672C31B9CC0043C7A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F0DEADEC2C3D484100E71D79 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F0DEADEE2C3D708400E71D79 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		F0DEADF02C3DB22D00E71D79 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		F0DEADF52C3DB4DB00E71D79 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		F0E6227D2C37344D0054B0F3 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		F0E93F5D2C3C70C80069EE39 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0E622782C3731840054B0F3 /* FirebaseAnalyticsSwift in Frameworks */,
+				F0DEADF42C3DB27B00E71D79 /* FirebaseAuth in Frameworks */,
 				F0E622742C3731840054B0F3 /* FirebaseAnalytics in Frameworks */,
 				F0E622762C3731840054B0F3 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				F0E6227C2C3731840054B0F3 /* FirebaseAppCheck in Frameworks */,
@@ -84,6 +90,7 @@
 		F058C13E2C31B84400D127C0 /* CepteSaham */ = {
 			isa = PBXGroup;
 			children = (
+				F0DEADF22C3DB23800E71D79 /* Service */,
 				F0E93F5A2C3C6F9C0069EE39 /* Custom */,
 				F0E622712C372B3A0054B0F3 /* font */,
 				F058C13F2C31B84400D127C0 /* AppDelegate.swift */,
@@ -91,6 +98,7 @@
 				F058C1432C31B84400D127C0 /* MainPageViewController.swift */,
 				F0E6227D2C37344D0054B0F3 /* LoginPageViewController.swift */,
 				F0DEADEC2C3D484100E71D79 /* RegisterViewController.swift */,
+				F0DEADF52C3DB4DB00E71D79 /* HomePageViewController.swift */,
 				F0DEADEE2C3D708400E71D79 /* SplashScreenViewController.swift */,
 				F058C1452C31B84400D127C0 /* Main.storyboard */,
 				F058C1482C31B84500D127C0 /* Assets.xcassets */,
@@ -107,6 +115,14 @@
 				F071AC412C3C853400690791 /* PrimaryButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		F0DEADF22C3DB23800E71D79 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F0DEADF02C3DB22D00E71D79 /* AuthService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		F0E622712C372B3A0054B0F3 /* font */ = {
@@ -150,6 +166,7 @@
 				F0E622772C3731840054B0F3 /* FirebaseAnalyticsSwift */,
 				F0E622792C3731840054B0F3 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				F0E6227B2C3731840054B0F3 /* FirebaseAppCheck */,
+				F0DEADF32C3DB27B00E71D79 /* FirebaseAuth */,
 			);
 			productName = CepteSaham;
 			productReference = F058C13C2C31B84400D127C0 /* CepteSaham.app */;
@@ -216,8 +233,10 @@
 				F0E93F5E2C3C70C80069EE39 /* CustomLabel.swift in Sources */,
 				F0A7FCDD2C3C7A1A004C360A /* CustomTextField.swift in Sources */,
 				F071AC442C3CA2FA00690791 /* RangeGestureRecognizer.swift in Sources */,
+				F0DEADF12C3DB22D00E71D79 /* AuthService.swift in Sources */,
 				F0E6227E2C37344D0054B0F3 /* LoginPageViewController.swift in Sources */,
 				F071AC422C3C853400690791 /* PrimaryButton.swift in Sources */,
+				F0DEADF62C3DB4DB00E71D79 /* HomePageViewController.swift in Sources */,
 				F058C1402C31B84400D127C0 /* AppDelegate.swift in Sources */,
 				F0DEADEF2C3D708400E71D79 /* SplashScreenViewController.swift in Sources */,
 				F058C1422C31B84400D127C0 /* SceneDelegate.swift in Sources */,
@@ -458,6 +477,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F0DEADF32C3DB27B00E71D79 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F0E622722C3731840054B0F3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
 		F0E622732C3731840054B0F3 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F0E622722C3731840054B0F3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

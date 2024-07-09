@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  CepteSaham
-//
-//  Created by Berkay Demir on 30.06.2024.
-//
-
 import UIKit
 
 class MainPageViewController: UIViewController {
