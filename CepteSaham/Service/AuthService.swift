@@ -32,6 +32,14 @@ class AuthService {
         }
     }
     
-    // Add more methods as needed for logout, password reset, etc.
+    // Function to log out the current user
+    func logoutUser(completion: @escaping (Result<Void, Error>) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            completion(.success(()))
+        } catch let error {
+            completion(.failure(error))
+        }
+    }
     
 }
