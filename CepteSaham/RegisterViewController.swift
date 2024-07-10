@@ -60,20 +60,19 @@ class RegisterViewController: UIViewController {
             return
         }
             
-        // Call Firebase authentication to create a new user with email and password
-        Auth.auth().createUser(withEmail: email, password: password) { [weak self] authResult, error in
+        // Use AuthService to create a new user
+        AuthService.shared.createUser(email: email, password: password) { [weak self] result in
             guard let self = self else { return }
-            
-            if let error = error {
-                self.showAlert(message: "Failed to create user: \(error.localizedDescription)")
-                return
-            }
-            
-            // User successfully created
-            if let user = authResult?.user {
+                
+            switch result {
+            case .success(let user):
+                // User successfully created
                 print("User created with email: \(user.email ?? "Unknown email")")
                 // Optionally, you can navigate to the login screen after successful registration
                 self.navigateToLogin()
+            case .failure(let error):
+                // Show error message
+                self.showAlert(message: "Failed to create user: \(error.localizedDescription)")
             }
         }
     }
@@ -83,11 +82,5 @@ class RegisterViewController: UIViewController {
         if let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
             present(loginVC, animated: true, completion: nil)
         }
-    }
-    
-    private func showAlert(message: String) {
-        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
     }
 }

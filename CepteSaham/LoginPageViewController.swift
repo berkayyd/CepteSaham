@@ -55,22 +55,18 @@ class LoginViewController: UIViewController {
             return
         }
             
-        // Call Firebase authentication to sign in with email and password
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+        // Use AuthService to log in the user
+        AuthService.shared.loginUser(email: email, password: password) { [weak self] result in
             guard let self = self else { return }
-                
-            if let error = error {
+            
+            switch result {
+            case .success(let user):
+                // Successfully logged in
+                print("User logged in with email: \(user.email ?? "Unknown email")")
+                self.navigateToHome()
+            case .failure(let error):
                 // Show error message
                 self.showAlert(message: "Failed to log in: \(error.localizedDescription)")
-                return
-            }
-                
-            // Successfully logged in
-            if let user = authResult?.user {
-                // Navigate to next screen or perform actions after login
-                print("User logged in with email: \(user.email ?? "Unknown email")")
-                // Example: Navigate to a home screen
-                self.navigateToHome()
             }
         }
     }
@@ -88,13 +84,6 @@ class LoginViewController: UIViewController {
             present(homeVC, animated: true, completion: nil)
         }
     }
-        
-    private func showAlert(message: String) {
-        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
-    }
-
 }
 
 

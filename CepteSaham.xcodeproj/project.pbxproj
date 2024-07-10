@@ -16,6 +16,8 @@
 		F0704E0E2C35C2590017AE39 /* Big_Shoulders_Display in Resources */ = {isa = PBXBuildFile; fileRef = F0704E0D2C35C2590017AE39 /* Big_Shoulders_Display */; };
 		F071AC422C3C853400690791 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071AC412C3C853400690791 /* PrimaryButton.swift */; };
 		F071AC442C3CA2FA00690791 /* RangeGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071AC432C3CA2FA00690791 /* RangeGestureRecognizer.swift */; };
+		F076B86E2C3EE3DC00AD234E /* Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F076B86D2C3EE3DC00AD234E /* Hex.swift */; };
+		F076B8702C3EE40400AD234E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F076B86F2C3EE40400AD234E /* Alert.swift */; };
 		F0A7FCDD2C3C7A1A004C360A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A7FCDC2C3C7A1A004C360A /* CustomTextField.swift */; };
 		F0AC11682C31B9CC0043C7A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0AC11672C31B9CC0043C7A4 /* GoogleService-Info.plist */; };
 		F0DEADED2C3D484100E71D79 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DEADEC2C3D484100E71D79 /* RegisterViewController.swift */; };
@@ -44,6 +46,8 @@
 		F0704E0D2C35C2590017AE39 /* Big_Shoulders_Display */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Big_Shoulders_Display; sourceTree = "<group>"; };
 		F071AC412C3C853400690791 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		F071AC432C3CA2FA00690791 /* RangeGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeGestureRecognizer.swift; sourceTree = "<group>"; };
+		F076B86D2C3EE3DC00AD234E /* Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hex.swift; sourceTree = "<group>"; };
+		F076B86F2C3EE40400AD234E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		F0A7FCDC2C3C7A1A004C360A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		F0AC11672C31B9CC0043C7A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F0DEADEC2C3D484100E71D79 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 		F058C13E2C31B84400D127C0 /* CepteSaham */ = {
 			isa = PBXGroup;
 			children = (
+				F076B86C2C3EE38300AD234E /* Extensions */,
 				F0DEADF22C3DB23800E71D79 /* Service */,
 				F0E93F5A2C3C6F9C0069EE39 /* Custom */,
 				F0E622712C372B3A0054B0F3 /* font */,
@@ -115,6 +120,15 @@
 				F071AC412C3C853400690791 /* PrimaryButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		F076B86C2C3EE38300AD234E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F076B86D2C3EE3DC00AD234E /* Hex.swift */,
+				F076B86F2C3EE40400AD234E /* Alert.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F0DEADF22C3DB23800E71D79 /* Service */ = {
@@ -234,11 +248,13 @@
 				F0A7FCDD2C3C7A1A004C360A /* CustomTextField.swift in Sources */,
 				F071AC442C3CA2FA00690791 /* RangeGestureRecognizer.swift in Sources */,
 				F0DEADF12C3DB22D00E71D79 /* AuthService.swift in Sources */,
+				F076B8702C3EE40400AD234E /* Alert.swift in Sources */,
 				F0E6227E2C37344D0054B0F3 /* LoginPageViewController.swift in Sources */,
 				F071AC422C3C853400690791 /* PrimaryButton.swift in Sources */,
 				F0DEADF62C3DB4DB00E71D79 /* HomePageViewController.swift in Sources */,
 				F058C1402C31B84400D127C0 /* AppDelegate.swift in Sources */,
 				F0DEADEF2C3D708400E71D79 /* SplashScreenViewController.swift in Sources */,
+				F076B86E2C3EE3DC00AD234E /* Hex.swift in Sources */,
 				F058C1422C31B84400D127C0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
