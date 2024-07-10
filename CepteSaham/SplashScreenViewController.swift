@@ -13,7 +13,7 @@ class SplashScreenViewController: UIViewController {
     }
 
     private func setupBackgroundImage() {
-        let backgroundImage = UIImage(named: "Brown Minimalist Pet Shop App Login Page Mobile Prototype-2 1-4")
+        let backgroundImage = UIImage(named: "splashScreen")
         let backgroundImageView = UIImageView(image: backgroundImage)
         backgroundImageView.contentMode = .scaleAspectFill
         backgroundImageView.frame = self.view.bounds
