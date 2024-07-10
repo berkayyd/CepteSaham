@@ -25,21 +25,20 @@ class HomePageViewController: UIViewController {
             
             switch result {
             case .success:
-                // Navigate to login screen after logout
                 self.navigateToMain()
             case .failure(let error):
                 print("Error signing out: \(error.localizedDescription)")
-                // Optionally, show an alert or handle the error gracefully
+                showAlert(message: "Failed to log out: \(error.localizedDescription)")
             }
         }
     }
     
     private func navigateToMain() {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            if let loginVC = storyboard.instantiateViewController(withIdentifier: "MainPageViewController") as? MainPageViewController {
-                // Set login view controller as root to reset navigation stack
-                UIApplication.shared.windows.first?.rootViewController = loginVC
-                UIApplication.shared.windows.first?.makeKeyAndVisible()
-            }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let mainVC = storyboard.instantiateViewController(withIdentifier: "MainPageViewController") as? MainPageViewController {
+            
+            UIApplication.shared.windows.first?.rootViewController = mainVC
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
         }
+    }
 }

@@ -25,13 +25,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if Auth.auth().currentUser != nil {
             // User is logged in, show the home view controller
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
+            let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomePageViewController")
             window?.rootViewController = homeViewController
         } else {
             // User is not logged in, show the login/register view controller
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
-            window?.rootViewController = loginViewController
+            let mainPageVC = storyboard.instantiateViewController(withIdentifier: "MainPageViewController")
+            window?.rootViewController = mainPageVC
         }
                 
         window?.makeKeyAndVisible()
