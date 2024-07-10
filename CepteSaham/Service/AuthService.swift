@@ -32,6 +32,39 @@ class AuthService {
         }
     }
     
+    // Function to send a verification email to the current user
+    func sendVerificationEmail(completion: @escaping (Result<Void, Error>) -> Void) {
+        guard let user = Auth.auth().currentUser else {
+            completion(.failure(AuthError.noCurrentUser))
+            return
+        }
+        
+        user.sendEmailVerification { error in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                completion(.success(()))
+            }
+        }
+    }
+    
+    // Function to check if the current user's email is verified
+    func isEmailVerified(completion: @escaping (Result<Bool, Error>) -> Void) {
+        guard let user = Auth.auth().currentUser else {
+            completion(.failure(AuthError.noCurrentUser))
+            return
+        }
+        
+        user.reload { error in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                completion(.success(user.isEmailVerified))
+            }
+        }
+    }
+    
+    
     // Function to log out the current user
     func logoutUser(completion: @escaping (Result<Void, Error>) -> Void) {
         do {
@@ -42,4 +75,9 @@ class AuthService {
         }
     }
     
+}
+
+// Custom error for authentication related issues
+enum AuthError: Error {
+    case noCurrentUser
 }

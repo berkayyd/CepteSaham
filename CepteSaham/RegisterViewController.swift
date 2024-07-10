@@ -13,6 +13,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var confirmPasswordTextField: CustomTextField!
     @IBOutlet weak var loginLabel: UILabel!
     
+    private var authStateDidChangeHandle: AuthStateDidChangeListenerHandle?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,6 +37,7 @@ class RegisterViewController: UIViewController {
         loginLabel.addRangeGesture(stringRange: "Giriş Yap") {
             self.navigateToLogin()
         }
+
     }
     
     @IBAction func saveBtnTapped(_ sender: UIButton) {
@@ -60,27 +63,42 @@ class RegisterViewController: UIViewController {
             return
         }
             
-        // Use AuthService to create a new user
         AuthService.shared.createUser(email: email, password: password) { [weak self] result in
             guard let self = self else { return }
                 
             switch result {
             case .success(let user):
-                // User successfully created
-                print("User created with email: \(user.email ?? "Unknown email")")
-                // Optionally, you can navigate to the login screen after successful registration
-                self.navigateToLogin()
+                print("User created successfully. Please check your email for verification.")
+                self.sendVerificationEmail(to: user)
+
             case .failure(let error):
-                // Show error message
                 self.showAlert(message: "Failed to create user: \(error.localizedDescription)")
             }
         }
     }
+    
+    private func sendVerificationEmail(to user: User) {
+        user.sendEmailVerification { error in
+            if let error = error {
+                print("Error sending verification email: \(error.localizedDescription)")
+            } else {
+                self.showAlert(message: "Verification email sent to \(user.email ?? "user")")
+            }
+        }
+    }
+
 
     @objc private func navigateToLogin() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
             present(loginVC, animated: true, completion: nil)
+        }
+    }
+    
+    private func navigateToHome() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let homeVC = storyboard.instantiateViewController(withIdentifier: "HomePageViewController") as? HomePageViewController {
+            present(homeVC, animated: true, completion: nil)
         }
     }
 }
