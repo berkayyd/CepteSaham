@@ -61,9 +61,14 @@ class LoginViewController: UIViewController {
             
             switch result {
             case .success(let user):
-                // Successfully logged in
-                print("User logged in with email: \(user.email ?? "Unknown email")")
-                self.navigateToHome()
+                if user.isEmailVerified {
+                    // Successfully logged in and email verified
+                    print("User logged in with email: \(user.email ?? "Unknown email")")
+                    self.navigateToHome()
+                } else {
+                    // Email not verified
+                    self.showAlert(message: "Please verify your email before logging in.")
+                }
             case .failure(let error):
                 // Show error message
                 self.showAlert(message: "Failed to log in: \(error.localizedDescription)")

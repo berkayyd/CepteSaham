@@ -70,7 +70,8 @@ class RegisterViewController: UIViewController {
             case .success(let user):
                 print("User created successfully. Please check your email for verification.")
                 self.sendVerificationEmail(to: user)
-
+                navigateToLogin()
+                
             case .failure(let error):
                 self.showAlert(message: "Failed to create user: \(error.localizedDescription)")
             }
