@@ -64,6 +64,17 @@ class AuthService {
         }
     }
     
+    // Function to reset the password for a given email
+    func resetPassword(email: String, completion: @escaping (Result<Void, Error>) -> Void) {
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                completion(.success(()))
+            }
+        }
+    }
+    
     
     // Function to log out the current user
     func logoutUser(completion: @escaping (Result<Void, Error>) -> Void) {

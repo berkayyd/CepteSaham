@@ -1,15 +1,13 @@
-//
-//  ResetPasswordViewController.swift
-//  CepteSaham
-//
-//  Created by Berkay Demir on 14.07.2024.
-//
-
 import UIKit
 
 class ForgotPasswordViewController: UIViewController {
 
     @IBOutlet weak var containerView: UIView!
+            
+    @IBOutlet weak var cancelBtn: UIButton!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var resetBtn: PrimaryButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +20,36 @@ class ForgotPasswordViewController: UIViewController {
         view.insertSubview(backgroundImageView, at: 0)
         
         containerView.backgroundColor = UIColor(hex: "#F6FFF5")
+                
+        cancelBtn.tintColor = UIColor(hex: "#4E9041")
+        
+        resetBtn.addTarget(self, action: #selector(resetButtonTapped), for: .touchUpInside)
+
+    }
+    
+    @objc func resetButtonTapped() {
+        guard let email = emailTextField.text, !email.isEmpty else {
+            showAlert(message: "Lütfen e-posta adresinizi girin.")
+            return
+        }
+        
+        AuthService.shared.resetPassword(email: email) { [weak self] result in
+            switch result {
+            case .success:
+                self?.showAlert(message: "Şifre sıfırlama e-postası gönderildi.") {
+                    self?.navigateToLogin()
+                }
+            case .failure(let error):
+                self?.showAlert(message: "Hata: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    @objc private func navigateToLogin() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
+            present(loginVC, animated: true, completion: nil)
+        }
     }
 
 }
