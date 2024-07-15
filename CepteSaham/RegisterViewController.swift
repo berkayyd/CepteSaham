@@ -13,8 +13,6 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var confirmPasswordTextField: CustomTextField!
     @IBOutlet weak var loginLabel: UILabel!
     
-    private var authStateDidChangeHandle: AuthStateDidChangeListenerHandle?
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -68,9 +66,7 @@ class RegisterViewController: UIViewController {
                 
             switch result {
             case .success(let user):
-                print("User created successfully. Please check your email for verification.")
                 self.sendVerificationEmail(to: user)
-                navigateToLogin()
                 
             case .failure(let error):
                 self.showAlert(message: "Failed to create user: \(error.localizedDescription)")
@@ -83,7 +79,9 @@ class RegisterViewController: UIViewController {
             if let error = error {
                 print("Error sending verification email: \(error.localizedDescription)")
             } else {
-                self.showAlert(message: "Verification email sent to \(user.email ?? "user")")
+                self.showAlert(message: "User created successfully. Please check your email for verification.") {
+                    self.navigateToLogin()
+                }
             }
         }
     }
