@@ -37,7 +37,7 @@ class ForgotPasswordViewController: UIViewController {
             switch result {
             case .success:
                 self?.showAlert(message: "Şifre sıfırlama e-postası gönderildi.") {
-                    self?.navigateToLogin()
+                    self?.dismiss(animated: true, completion: nil)
                 }
             case .failure(let error):
                 self?.showAlert(message: "Hata: \(error.localizedDescription)")
@@ -45,10 +45,11 @@ class ForgotPasswordViewController: UIViewController {
         }
     }
     
-    @objc private func navigateToLogin() {
+    
+    @IBAction func cancelBtnTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
-            present(loginVC, animated: true, completion: nil)
+            dismiss(animated: true, completion: nil)
         }
     }
 

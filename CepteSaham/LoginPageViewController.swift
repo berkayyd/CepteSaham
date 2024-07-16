@@ -25,6 +25,7 @@ class LoginViewController: UIViewController {
             
         forgotPasswordBtn.tintColor = UIColor(hex: "#4E9041")
         forgotPasswordBtn.titleLabel?.font = UIFont(name: "BigShouldersDisplay-ExtraBold", size: forgotPasswordBtn.titleLabel?.font.pointSize ?? UIFont.systemFontSize)
+        forgotPasswordBtn.addTarget(self, action: #selector(forgotBtnTapped), for: .touchUpInside)
                 
         containerView.backgroundColor = UIColor(hex: "#F6FFF5")
         
@@ -73,6 +74,13 @@ class LoginViewController: UIViewController {
                 // Show error message
                 self.showAlert(message: "Failed to log in: \(error.localizedDescription)")
             }
+        }
+    }
+    
+    @objc func forgotBtnTapped() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let forgotVC = storyboard.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as? ForgotPasswordViewController {
+            self.present(forgotVC, animated: true)
         }
     }
         
