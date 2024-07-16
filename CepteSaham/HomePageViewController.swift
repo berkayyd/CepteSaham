@@ -37,6 +37,7 @@ class HomePageViewController: UIViewController {
         
         if let mainVC = storyboard.instantiateViewController(withIdentifier: "MainPageViewController") as? MainPageViewController {
             let navController = UINavigationController(rootViewController: mainVC)
+            navController.navigationBar.tintColor = .white
             // Update the root view controller of the window
             if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
                 sceneDelegate.window?.rootViewController = navController

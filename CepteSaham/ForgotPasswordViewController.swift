@@ -26,7 +26,7 @@ class ForgotPasswordViewController: UIViewController {
         resetBtn.addTarget(self, action: #selector(resetButtonTapped), for: .touchUpInside)
 
     }
-    
+
     @objc func resetButtonTapped() {
         guard let email = emailTextField.text, !email.isEmpty else {
             showAlert(message: "Lütfen e-posta adresinizi girin.")
@@ -37,7 +37,7 @@ class ForgotPasswordViewController: UIViewController {
             switch result {
             case .success:
                 self?.showAlert(message: "Şifre sıfırlama e-postası gönderildi.") {
-                    self?.dismiss(animated: true, completion: nil)
+                    self?.dismiss(animated: true)
                 }
             case .failure(let error):
                 self?.showAlert(message: "Hata: \(error.localizedDescription)")
@@ -47,10 +47,7 @@ class ForgotPasswordViewController: UIViewController {
     
     
     @IBAction func cancelBtnTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
-            dismiss(animated: true, completion: nil)
-        }
+        dismiss(animated: true)
     }
 
 }
