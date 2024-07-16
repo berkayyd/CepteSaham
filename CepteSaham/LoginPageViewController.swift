@@ -79,14 +79,17 @@ class LoginViewController: UIViewController {
     @objc private func navigateToRegister() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let registerVC = storyboard.instantiateViewController(withIdentifier:"RegisterViewController") as? RegisterViewController {
-            present(registerVC, animated: true, completion: nil)
+            var viewControllers = self.navigationController?.viewControllers
+            viewControllers?.removeLast() // Remove the current LoginViewController
+            viewControllers?.append(registerVC) // Add RegisterViewController
+            self.navigationController?.setViewControllers(viewControllers!, animated: true)
         }
     }
-        
+    
     private func navigateToHome() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let homeVC = storyboard.instantiateViewController(withIdentifier: "HomePageViewController") as? HomePageViewController {
-            present(homeVC, animated: true, completion: nil)
+            present(homeVC, animated: true)
         }
     }
 }

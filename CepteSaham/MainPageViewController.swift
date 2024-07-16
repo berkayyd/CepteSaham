@@ -115,8 +115,7 @@ class MainPageViewController: UIViewController {
     @objc func navigateToLogin() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
-            present(loginVC, animated: true)
-            //navigationController?.pushViewController(loginVC, animated: true)
+            navigationController?.pushViewController(loginVC, animated: true)
         }
     }
 

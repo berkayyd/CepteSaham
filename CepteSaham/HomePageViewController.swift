@@ -19,7 +19,6 @@ class HomePageViewController: UIViewController {
     }
     
     @objc private func logoutTapped() {
-        // Use AuthService to logout the user
         AuthService.shared.logoutUser { [weak self] result in
             guard let self = self else { return }
             
@@ -35,10 +34,14 @@ class HomePageViewController: UIViewController {
     
     private func navigateToMain() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
         if let mainVC = storyboard.instantiateViewController(withIdentifier: "MainPageViewController") as? MainPageViewController {
-            
-            UIApplication.shared.windows.first?.rootViewController = mainVC
-            UIApplication.shared.windows.first?.makeKeyAndVisible()
+            let navController = UINavigationController(rootViewController: mainVC)
+            // Update the root view controller of the window
+            if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+                sceneDelegate.window?.rootViewController = navController
+                sceneDelegate.window?.makeKeyAndVisible()
+            }
         }
     }
 }
