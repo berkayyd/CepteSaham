@@ -72,7 +72,7 @@ class MainPageViewController: UIViewController {
         view.addSubview(businessButton)
             
         NSLayoutConstraint.activate([
-            businessButton.topAnchor.constraint(equalTo: instructionLabel.bottomAnchor, constant: screenHeight * 0.08),
+            businessButton.topAnchor.constraint(equalTo: instructionLabel.bottomAnchor, constant: screenHeight * 0.03),
             businessButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             businessButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             businessButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.07)
