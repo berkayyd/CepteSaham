@@ -14,29 +14,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        
         window = UIWindow(windowScene: windowScene)
-                
-        // Check if the user is logged in
-        if Auth.auth().currentUser != nil {
-            // User is logged in, show the home view controller
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomePageViewController")
-            window?.rootViewController = homeViewController
-        } else {
-            // User is not logged in, show the login/register view controller
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let mainPageVC = storyboard.instantiateViewController(withIdentifier: "MainPageViewController")
-            window?.rootViewController = mainPageVC
-        }
-                
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let splashScreenViewController = storyboard.instantiateViewController(withIdentifier: "SplashScreenViewController")
+        window?.rootViewController = splashScreenViewController
         window?.makeKeyAndVisible()
     }
-
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

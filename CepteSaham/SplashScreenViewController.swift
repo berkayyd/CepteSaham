@@ -1,4 +1,5 @@
 import UIKit
+import FirebaseAuth
 
 class SplashScreenViewController: UIViewController {
 
@@ -34,13 +35,24 @@ class SplashScreenViewController: UIViewController {
             }, completion: { _ in
                 // Add delay before transitioning to the main app
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                    let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let mainViewController = mainStoryboard.instantiateViewController(withIdentifier: "MainPageViewController") as! MainPageViewController
-                    mainViewController.modalTransitionStyle = .crossDissolve
-                    self.present(mainViewController, animated: true, completion: nil)
+                    self.transitionToNextViewController()
                 }
             })
         }
+    }
+    
+    private func transitionToNextViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var nextViewController: UIViewController
+
+        if Auth.auth().currentUser != nil {
+            nextViewController = storyboard.instantiateViewController(withIdentifier: "HomePageViewController")
+        } else {
+            nextViewController = storyboard.instantiateViewController(withIdentifier: "MainPageViewController")
+        }
+
+        nextViewController.modalTransitionStyle = .crossDissolve
+        self.present(nextViewController, animated: true, completion: nil)
     }
 
 }
