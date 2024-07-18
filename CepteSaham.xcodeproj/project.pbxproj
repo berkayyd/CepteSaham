@@ -14,6 +14,7 @@
 		F058C1472C31B84400D127C0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F058C1462C31B84400D127C0 /* Base */; };
 		F058C1492C31B84500D127C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F058C1482C31B84500D127C0 /* Assets.xcassets */; };
 		F058C14C2C31B84500D127C0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F058C14B2C31B84500D127C0 /* Base */; };
+		F05CF7232C49AC8100995676 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05CF7222C49AC8100995676 /* FavouritesViewController.swift */; };
 		F0704E0E2C35C2590017AE39 /* Big_Shoulders_Display in Resources */ = {isa = PBXBuildFile; fileRef = F0704E0D2C35C2590017AE39 /* Big_Shoulders_Display */; };
 		F071AC422C3C853400690791 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071AC412C3C853400690791 /* PrimaryButton.swift */; };
 		F071AC442C3CA2FA00690791 /* RangeGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071AC432C3CA2FA00690791 /* RangeGestureRecognizer.swift */; };
@@ -46,6 +47,7 @@
 		F058C1482C31B84500D127C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F058C14B2C31B84500D127C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F058C14D2C31B84500D127C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F05CF7222C49AC8100995676 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		F0704E0D2C35C2590017AE39 /* Big_Shoulders_Display */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Big_Shoulders_Display; sourceTree = "<group>"; };
 		F071AC412C3C853400690791 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		F071AC432C3CA2FA00690791 /* RangeGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeGestureRecognizer.swift; sourceTree = "<group>"; };
@@ -98,25 +100,50 @@
 		F058C13E2C31B84400D127C0 /* CepteSaham */ = {
 			isa = PBXGroup;
 			children = (
+				F05CF7262C49ACD200995676 /* Delegates */,
+				F05CF7252C49ACBA00995676 /* HomeVCs */,
+				F05CF7242C49AC8E00995676 /* LoginVCs */,
 				F0E14EF22C4962F9002A210B /* Storyboards */,
 				F076B86C2C3EE38300AD234E /* Extensions */,
 				F0DEADF22C3DB23800E71D79 /* Service */,
 				F0E93F5A2C3C6F9C0069EE39 /* Custom */,
 				F0E622712C372B3A0054B0F3 /* font */,
-				F058C13F2C31B84400D127C0 /* AppDelegate.swift */,
-				F058C1412C31B84400D127C0 /* SceneDelegate.swift */,
-				F0DEADEE2C3D708400E71D79 /* SplashScreenViewController.swift */,
-				F058C1432C31B84400D127C0 /* MainPageViewController.swift */,
-				F0E6227D2C37344D0054B0F3 /* LoginPageViewController.swift */,
-				F0DEADEC2C3D484100E71D79 /* RegisterViewController.swift */,
-				F0DEADF52C3DB4DB00E71D79 /* HomePageViewController.swift */,
-				F044C3F62C4405FB00F16145 /* ForgotPasswordViewController.swift */,
 				F058C1482C31B84500D127C0 /* Assets.xcassets */,
 				F058C14A2C31B84500D127C0 /* LaunchScreen.storyboard */,
 				F058C14D2C31B84500D127C0 /* Info.plist */,
 				F0AC11672C31B9CC0043C7A4 /* GoogleService-Info.plist */,
 			);
 			path = CepteSaham;
+			sourceTree = "<group>";
+		};
+		F05CF7242C49AC8E00995676 /* LoginVCs */ = {
+			isa = PBXGroup;
+			children = (
+				F0DEADEE2C3D708400E71D79 /* SplashScreenViewController.swift */,
+				F058C1432C31B84400D127C0 /* MainPageViewController.swift */,
+				F0E6227D2C37344D0054B0F3 /* LoginPageViewController.swift */,
+				F0DEADEC2C3D484100E71D79 /* RegisterViewController.swift */,
+				F044C3F62C4405FB00F16145 /* ForgotPasswordViewController.swift */,
+			);
+			path = LoginVCs;
+			sourceTree = "<group>";
+		};
+		F05CF7252C49ACBA00995676 /* HomeVCs */ = {
+			isa = PBXGroup;
+			children = (
+				F0DEADF52C3DB4DB00E71D79 /* HomePageViewController.swift */,
+				F05CF7222C49AC8100995676 /* FavouritesViewController.swift */,
+			);
+			path = HomeVCs;
+			sourceTree = "<group>";
+		};
+		F05CF7262C49ACD200995676 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				F058C13F2C31B84400D127C0 /* AppDelegate.swift */,
+				F058C1412C31B84400D127C0 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 		F071AC402C3C851F00690791 /* Buttons */ = {
@@ -257,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F05CF7232C49AC8100995676 /* FavouritesViewController.swift in Sources */,
 				F0DEADED2C3D484100E71D79 /* RegisterViewController.swift in Sources */,
 				F058C1442C31B84400D127C0 /* MainPageViewController.swift in Sources */,
 				F0E93F5E2C3C70C80069EE39 /* CustomLabel.swift in Sources */,
