@@ -65,7 +65,7 @@ class LoginViewController: UIViewController {
                 if user.isEmailVerified {
                     // Successfully logged in and email verified
                     print("User logged in with email: \(user.email ?? "Unknown email")")
-                    performSegue(withIdentifier: "toTabBar", sender: nil)
+                    navigateToTabBar()
                 } else {
                     // Email not verified
                     self.showAlert(message: "Please verify your email before logging in.")
@@ -94,12 +94,17 @@ class LoginViewController: UIViewController {
         }
     }
     
-    /*private func navigateToHome() {
+    private func navigateToTabBar() {
         let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
-        if let homeVC = storyboard.instantiateViewController(withIdentifier: "HomePageViewController") as? HomePageViewController {
-            present(homeVC, animated: true)
+        if let tabBarVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? UITabBarController {
+            if let sceneDelegate = UIApplication.shared.connectedScenes
+                .first?.delegate as? SceneDelegate, let window = sceneDelegate.window {
+                window.rootViewController = tabBarVC
+                UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil, completion: nil)
+            }
         }
-    }*/
+    }
+
 }
 
 

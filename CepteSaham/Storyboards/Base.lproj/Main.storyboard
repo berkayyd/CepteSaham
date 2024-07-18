@@ -125,7 +125,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="loginTapped:" destination="fJL-Hb-IWR" eventType="touchUpInside" id="Kz4-Of-gaB"/>
-                                            <segue destination="s6T-US-0SJ" kind="show" identifier="toTabBar" id="MHE-RR-3D0"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hesabın yok mu? Kaydol" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eac-mw-r5o">
