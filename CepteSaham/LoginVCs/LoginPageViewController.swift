@@ -65,7 +65,7 @@ class LoginViewController: UIViewController {
                 if user.isEmailVerified {
                     // Successfully logged in and email verified
                     print("User logged in with email: \(user.email ?? "Unknown email")")
-                    self.navigateToHome()
+                    performSegue(withIdentifier: "toTabBar", sender: nil)
                 } else {
                     // Email not verified
                     self.showAlert(message: "Please verify your email before logging in.")
@@ -94,12 +94,12 @@ class LoginViewController: UIViewController {
         }
     }
     
-    private func navigateToHome() {
+    /*private func navigateToHome() {
         let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
         if let homeVC = storyboard.instantiateViewController(withIdentifier: "HomePageViewController") as? HomePageViewController {
             present(homeVC, animated: true)
         }
-    }
+    }*/
 }
 
 

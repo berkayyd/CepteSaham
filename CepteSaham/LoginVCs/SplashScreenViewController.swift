@@ -43,10 +43,13 @@ class SplashScreenViewController: UIViewController {
     
     private func transitionToNextViewController() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let secondStoryboard = UIStoryboard(name: "TabBar", bundle: nil)
         
         if Auth.auth().currentUser != nil {
-            let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomePageViewController")
-            self.present(homeViewController, animated: true)
+            if let tabBarVC = secondStoryboard.instantiateViewController(withIdentifier: "TabBarController") as? UITabBarController {
+                tabBarVC.modalPresentationStyle = .fullScreen
+                self.present(tabBarVC, animated: true)
+            }
         } else {
             let navigationController = storyboard.instantiateViewController(withIdentifier: "navController") as! UINavigationController
             let mainPageViewController = storyboard.instantiateViewController(withIdentifier: "MainPageViewController")
