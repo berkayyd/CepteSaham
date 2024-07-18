@@ -95,7 +95,7 @@ class LoginViewController: UIViewController {
     }
     
     private func navigateToHome() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
         if let homeVC = storyboard.instantiateViewController(withIdentifier: "HomePageViewController") as? HomePageViewController {
             present(homeVC, animated: true)
         }

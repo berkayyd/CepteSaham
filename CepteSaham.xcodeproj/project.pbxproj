@@ -26,6 +26,7 @@
 		F0DEADF12C3DB22D00E71D79 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DEADF02C3DB22D00E71D79 /* AuthService.swift */; };
 		F0DEADF42C3DB27B00E71D79 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F0DEADF32C3DB27B00E71D79 /* FirebaseAuth */; };
 		F0DEADF62C3DB4DB00E71D79 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DEADF52C3DB4DB00E71D79 /* HomePageViewController.swift */; };
+		F0E14EF02C4961FE002A210B /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E14EEE2C4961FE002A210B /* TabBar.storyboard */; };
 		F0E622742C3731840054B0F3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F0E622732C3731840054B0F3 /* FirebaseAnalytics */; };
 		F0E622762C3731840054B0F3 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = F0E622752C3731840054B0F3 /* FirebaseAnalyticsOnDeviceConversion */; };
 		F0E622782C3731840054B0F3 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F0E622772C3731840054B0F3 /* FirebaseAnalyticsSwift */; };
@@ -56,6 +57,7 @@
 		F0DEADEE2C3D708400E71D79 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		F0DEADF02C3DB22D00E71D79 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F0DEADF52C3DB4DB00E71D79 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		F0E14EEF2C4961FE002A210B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CepteSaham/Base.lproj/TabBar.storyboard; sourceTree = "<group>"; };
 		F0E6227D2C37344D0054B0F3 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		F0E93F5D2C3C70C80069EE39 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 		F058C13E2C31B84400D127C0 /* CepteSaham */ = {
 			isa = PBXGroup;
 			children = (
+				F0E14EF22C4962F9002A210B /* Storyboards */,
 				F076B86C2C3EE38300AD234E /* Extensions */,
 				F0DEADF22C3DB23800E71D79 /* Service */,
 				F0E93F5A2C3C6F9C0069EE39 /* Custom */,
@@ -108,7 +111,6 @@
 				F0DEADEC2C3D484100E71D79 /* RegisterViewController.swift */,
 				F0DEADF52C3DB4DB00E71D79 /* HomePageViewController.swift */,
 				F044C3F62C4405FB00F16145 /* ForgotPasswordViewController.swift */,
-				F058C1452C31B84400D127C0 /* Main.storyboard */,
 				F058C1482C31B84500D127C0 /* Assets.xcassets */,
 				F058C14A2C31B84500D127C0 /* LaunchScreen.storyboard */,
 				F058C14D2C31B84500D127C0 /* Info.plist */,
@@ -140,6 +142,15 @@
 				F0DEADF02C3DB22D00E71D79 /* AuthService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		F0E14EF22C4962F9002A210B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F058C1452C31B84400D127C0 /* Main.storyboard */,
+				F0E14EEE2C4961FE002A210B /* TabBar.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		F0E622712C372B3A0054B0F3 /* font */ = {
@@ -234,6 +245,7 @@
 				F0704E0E2C35C2590017AE39 /* Big_Shoulders_Display in Resources */,
 				F0AC11682C31B9CC0043C7A4 /* GoogleService-Info.plist in Resources */,
 				F058C14C2C31B84500D127C0 /* Base in Resources */,
+				F0E14EF02C4961FE002A210B /* TabBar.storyboard in Resources */,
 				F058C1472C31B84400D127C0 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +292,14 @@
 				F058C14B2C31B84500D127C0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F0E14EEE2C4961FE002A210B /* TabBar.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0E14EEF2C4961FE002A210B /* Base */,
+			);
+			name = TabBar.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
