@@ -1,4 +1,5 @@
 import UIKit
+import FirebaseAuth
 
 class ForgotPasswordViewController: UIViewController {
 
@@ -33,14 +34,24 @@ class ForgotPasswordViewController: UIViewController {
             return
         }
         
-        AuthService.shared.resetPassword(email: email) { [weak self] result in
-            switch result {
-            case .success:
-                self?.showAlert(message: "Şifre sıfırlama e-postası gönderildi.") {
-                    self?.dismiss(animated: true)
-                }
-            case .failure(let error):
+        Auth.auth().fetchSignInMethods(forEmail: email) { [weak self] signInMethods, error in
+            if let error = error {
                 self?.showAlert(message: "Hata: \(error.localizedDescription)")
+                return
+            }
+            
+            if let signInMethods = signInMethods, !signInMethods.isEmpty {
+                Auth.auth().sendPasswordReset(withEmail: email) { error in
+                    if let error = error {
+                        self?.showAlert(message: "Hata: \(error.localizedDescription)")
+                    } else {
+                        self?.showAlert(message: "Şifre sıfırlama e-postası gönderildi.") {
+                            self?.dismiss(animated: true)
+                        }
+                    }
+                }
+            } else {
+                self?.showAlert(message: "Bu e-posta adresiyle kayıtlı bir kullanıcı bulunamadı.")
             }
         }
     }
