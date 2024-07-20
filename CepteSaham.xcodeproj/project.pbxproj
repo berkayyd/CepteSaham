@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F00EE8252C4C532E009AACF4 /* CampaignsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00EE8242C4C532E009AACF4 /* CampaignsCollectionViewCell.swift */; };
+		F00EE8272C4C54F1009AACF4 /* FullScreenPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00EE8262C4C54F1009AACF4 /* FullScreenPhotoViewController.swift */; };
 		F044C3F72C4405FB00F16145 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F044C3F62C4405FB00F16145 /* ForgotPasswordViewController.swift */; };
 		F058C1402C31B84400D127C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F058C13F2C31B84400D127C0 /* AppDelegate.swift */; };
 		F058C1422C31B84400D127C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F058C1412C31B84400D127C0 /* SceneDelegate.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F00EE8242C4C532E009AACF4 /* CampaignsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsCollectionViewCell.swift; sourceTree = "<group>"; };
+		F00EE8262C4C54F1009AACF4 /* FullScreenPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenPhotoViewController.swift; sourceTree = "<group>"; };
 		F044C3F62C4405FB00F16145 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		F058C13C2C31B84400D127C0 /* CepteSaham.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CepteSaham.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F058C13F2C31B84400D127C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 				F05CF7222C49AC8100995676 /* FavouritesViewController.swift */,
 				F05CF7272C49AD5200995676 /* MessagesViewController.swift */,
 				F05CF7292C49AD7300995676 /* ProfieViewController.swift */,
+				F00EE8242C4C532E009AACF4 /* CampaignsCollectionViewCell.swift */,
+				F00EE8262C4C54F1009AACF4 /* FullScreenPhotoViewController.swift */,
 			);
 			path = HomeVCs;
 			sourceTree = "<group>";
@@ -295,6 +301,7 @@
 				F058C1442C31B84400D127C0 /* MainPageViewController.swift in Sources */,
 				F05CF72A2C49AD7300995676 /* ProfieViewController.swift in Sources */,
 				F05CF7282C49AD5200995676 /* MessagesViewController.swift in Sources */,
+				F00EE8252C4C532E009AACF4 /* CampaignsCollectionViewCell.swift in Sources */,
 				F0E93F5E2C3C70C80069EE39 /* CustomLabel.swift in Sources */,
 				F0A7FCDD2C3C7A1A004C360A /* CustomTextField.swift in Sources */,
 				F071AC442C3CA2FA00690791 /* RangeGestureRecognizer.swift in Sources */,
@@ -303,6 +310,7 @@
 				F0E6227E2C37344D0054B0F3 /* LoginPageViewController.swift in Sources */,
 				F071AC422C3C853400690791 /* PrimaryButton.swift in Sources */,
 				F0DEADF62C3DB4DB00E71D79 /* HomePageViewController.swift in Sources */,
+				F00EE8272C4C54F1009AACF4 /* FullScreenPhotoViewController.swift in Sources */,
 				F058C1402C31B84400D127C0 /* AppDelegate.swift in Sources */,
 				F0DEADEF2C3D708400E71D79 /* SplashScreenViewController.swift in Sources */,
 				F044C3F72C4405FB00F16145 /* ForgotPasswordViewController.swift in Sources */,
