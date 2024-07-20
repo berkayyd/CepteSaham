@@ -14,10 +14,13 @@ class HomePageViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    @IBOutlet weak var profileViewContainer: UIView!
+    
     let photos = ["pitch1", "pitch2", "pitch3"] // Fotoğraf adlarınız
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         collectionView.delegate = self
         collectionView.dataSource = self
         
