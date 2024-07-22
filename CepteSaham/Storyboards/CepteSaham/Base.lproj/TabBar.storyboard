@@ -17,7 +17,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r0G-va-inN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.082352941176470587" green="0.29411764705882354" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="1oR-cr-iBs" kind="relationship" relationship="viewControllers" id="hL4-HC-Ddj"/>
@@ -83,29 +83,29 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="LOGOUT"/>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="41H-ei-jgR">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="41H-ei-jgR">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="162"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="profilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="tGr-6L-pbZ">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="profilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="tGr-6L-pbZ">
                                         <rect key="frame" x="26" y="72" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merhaba , Hoşgeldin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7M7-nK-35y">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Merhaba , Hoşgeldin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7M7-nK-35y">
                                         <rect key="frame" x="106" y="88" width="150" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.52156862745098043" green="0.52156862745098043" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Berkay Demir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwD-ic-MbA">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Berkay Demir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwD-ic-MbA">
                                         <rect key="frame" x="104" y="109" width="123" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="notification" translatesAutoresizingMaskIntoConstraints="NO" id="zgx-ok-hKA">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="notification" translatesAutoresizingMaskIntoConstraints="NO" id="zgx-ok-hKA">
                                         <rect key="frame" x="341" y="91" width="33" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -142,7 +142,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="349" height="209"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pitch2" translatesAutoresizingMaskIntoConstraints="NO" id="slA-hJ-rRY">
+                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pitch2" translatesAutoresizingMaskIntoConstraints="NO" id="slA-hJ-rRY">
                                                     <rect key="frame" x="0.0" y="0.0" width="349" height="209"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -193,7 +193,7 @@
             </objects>
             <point key="canvasLocation" x="4285" y="1346"/>
         </scene>
-        <!--Favourites-->
+        <!--Favoriler-->
         <scene sceneID="oDa-nZ-WYR">
             <objects>
                 <viewController id="4TH-0X-Thz" customClass="FavouritesViewController" customModule="CepteSaham" customModuleProvider="target" sceneMemberID="viewController">
@@ -203,17 +203,17 @@
                         <viewLayoutGuide key="safeArea" id="BKT-gh-uFO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favourites" id="qsP-pn-pqo"/>
+                    <tabBarItem key="tabBarItem" title="Favoriler" image="fav" id="qsP-pn-pqo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ua-ta-QFs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3389" y="591"/>
         </scene>
-        <!--Messages-->
+        <!--Mesajlar-->
         <scene sceneID="Gm9-ei-flH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KqR-IE-wWm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Messages" id="X0A-tc-uA3"/>
+                    <tabBarItem key="tabBarItem" title="Mesajlar" image="message" id="X0A-tc-uA3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aiD-4c-7BU">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -228,7 +228,7 @@
             </objects>
             <point key="canvasLocation" x="4286" y="591"/>
         </scene>
-        <!--Profile-->
+        <!--Profil-->
         <scene sceneID="TvV-nN-cBk">
             <objects>
                 <viewController id="Kfn-zF-UUa" customClass="ProfieViewController" customModule="CepteSaham" customModuleProvider="target" sceneMemberID="viewController">
@@ -238,17 +238,17 @@
                         <viewLayoutGuide key="safeArea" id="Q90-uH-5TN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="rog-hq-FeM"/>
+                    <tabBarItem key="tabBarItem" title="Profil" image="profile" id="rog-hq-FeM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mJ6-fK-BYq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5170" y="591"/>
         </scene>
-        <!--Home-->
+        <!--Anasayfa-->
         <scene sceneID="ZEj-RU-P8W">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1oR-cr-iBs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="066-HL-ZD7"/>
+                    <tabBarItem key="tabBarItem" title="Anasayfa" image="home" id="066-HL-ZD7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="k9t-Pt-AIS">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -265,8 +265,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fav" width="29" height="27"/>
+        <image name="home" width="34" height="34"/>
+        <image name="message" width="30" height="22"/>
         <image name="notification" width="33" height="33"/>
         <image name="pitch2" width="1200" height="600"/>
+        <image name="profile" width="33" height="33"/>
         <image name="profilePhoto" width="71" height="71"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
