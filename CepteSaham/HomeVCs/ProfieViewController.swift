@@ -7,23 +7,29 @@
 
 import UIKit
 
-class ProfieViewController: UIViewController {
+class ProfieViewController: UIViewController, UITableViewDelegate , UITableViewDataSource {
+
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var headerView: UIView!
+    let items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        tableView.tableHeaderView = headerView
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        return cell
+    }
+    
 }

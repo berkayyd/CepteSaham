@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F00AE9B62C4EBC61002FE44A /* ProfileOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00AE9B52C4EBC61002FE44A /* ProfileOptionCell.swift */; };
+		F00AE9B82C4EBF1E002FE44A /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00AE9B72C4EBF1E002FE44A /* ProfileHeaderView.swift */; };
 		F00EE8252C4C532E009AACF4 /* CampaignsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00EE8242C4C532E009AACF4 /* CampaignsCollectionViewCell.swift */; };
 		F00EE8272C4C54F1009AACF4 /* FullScreenPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00EE8262C4C54F1009AACF4 /* FullScreenPhotoViewController.swift */; };
 		F044C3F72C4405FB00F16145 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F044C3F62C4405FB00F16145 /* ForgotPasswordViewController.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F00AE9B52C4EBC61002FE44A /* ProfileOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionCell.swift; sourceTree = "<group>"; };
+		F00AE9B72C4EBF1E002FE44A /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		F00EE8242C4C532E009AACF4 /* CampaignsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F00EE8262C4C54F1009AACF4 /* FullScreenPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenPhotoViewController.swift; sourceTree = "<group>"; };
 		F044C3F62C4405FB00F16145 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 				F05CF7292C49AD7300995676 /* ProfieViewController.swift */,
 				F00EE8242C4C532E009AACF4 /* CampaignsCollectionViewCell.swift */,
 				F00EE8262C4C54F1009AACF4 /* FullScreenPhotoViewController.swift */,
+				F00AE9B52C4EBC61002FE44A /* ProfileOptionCell.swift */,
+				F00AE9B72C4EBF1E002FE44A /* ProfileHeaderView.swift */,
 			);
 			path = HomeVCs;
 			sourceTree = "<group>";
@@ -305,9 +311,11 @@
 				F0E93F5E2C3C70C80069EE39 /* CustomLabel.swift in Sources */,
 				F0A7FCDD2C3C7A1A004C360A /* CustomTextField.swift in Sources */,
 				F071AC442C3CA2FA00690791 /* RangeGestureRecognizer.swift in Sources */,
+				F00AE9B62C4EBC61002FE44A /* ProfileOptionCell.swift in Sources */,
 				F0DEADF12C3DB22D00E71D79 /* AuthService.swift in Sources */,
 				F076B8702C3EE40400AD234E /* Alert.swift in Sources */,
 				F0E6227E2C37344D0054B0F3 /* LoginPageViewController.swift in Sources */,
+				F00AE9B82C4EBF1E002FE44A /* ProfileHeaderView.swift in Sources */,
 				F071AC422C3C853400690791 /* PrimaryButton.swift in Sources */,
 				F0DEADF62C3DB4DB00E71D79 /* HomePageViewController.swift in Sources */,
 				F00EE8272C4C54F1009AACF4 /* FullScreenPhotoViewController.swift in Sources */,
