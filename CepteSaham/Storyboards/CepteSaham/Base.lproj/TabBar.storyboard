@@ -77,12 +77,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eT-mq-s85">
-                                <rect key="frame" x="114" y="642" width="165" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="LOGOUT"/>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="41H-ei-jgR">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="162"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -168,7 +162,6 @@
                     <navigationItem key="navigationItem" id="NsX-u3-tff"/>
                     <connections>
                         <outlet property="collectionView" destination="c6K-KI-faC" id="Mhb-NR-3Gi"/>
-                        <outlet property="logoutBtn" destination="3eT-mq-s85" id="bPS-i6-sEH"/>
                         <outlet property="pageControl" destination="zDj-UX-u9n" id="kG4-99-ifp"/>
                         <outlet property="profileViewContainer" destination="41H-ei-jgR" id="VaD-Yb-gQ6"/>
                     </connections>
@@ -318,6 +311,7 @@
                                         <connections>
                                             <outlet property="optionImageView" destination="lzg-bs-fHl" id="UwP-6h-pCi"/>
                                             <outlet property="optionLabel" destination="3uT-JY-beg" id="nU1-K2-Bgm"/>
+                                            <outlet property="toRightIcon" destination="qu4-Br-7Fb" id="OqQ-HB-uWe"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

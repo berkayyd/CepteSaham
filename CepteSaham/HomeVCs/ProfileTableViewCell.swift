@@ -11,6 +11,7 @@ class ProfileTableViewCell: UITableViewCell {
 
     @IBOutlet weak var optionImageView: UIImageView!
     @IBOutlet weak var optionLabel: UILabel!
+    @IBOutlet weak var toRightIcon: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
