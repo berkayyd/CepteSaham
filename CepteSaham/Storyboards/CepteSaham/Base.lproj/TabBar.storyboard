@@ -244,20 +244,20 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="profilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Wj5-RP-Gmi">
-                                            <rect key="frame" x="136.66666666666666" y="76" width="119.99999999999997" height="120"/>
+                                            <rect key="frame" x="136.66666666666666" y="69" width="119.99999999999997" height="120"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="120" id="JIx-1n-OAP"/>
                                                 <constraint firstAttribute="height" constant="120" id="ysl-cA-ZO8"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe William" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLn-5r-Gz6">
-                                            <rect key="frame" x="106.66666666666669" y="216" width="180" height="29"/>
+                                            <rect key="frame" x="106.66666666666669" y="209" width="180" height="29"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17M-Jq-abV">
-                                            <rect key="frame" x="161" y="8" width="70" height="39"/>
+                                            <rect key="frame" x="161.66666666666666" y="8" width="70" height="39"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                             <color key="textColor" red="0.08235294118" green="0.29411764709999999" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -266,7 +266,7 @@
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="17M-Jq-abV" firstAttribute="top" secondItem="iBN-zi-elE" secondAttribute="top" constant="8" id="5za-zK-aqJ"/>
-                                        <constraint firstAttribute="bottom" secondItem="FLn-5r-Gz6" secondAttribute="bottom" constant="8" id="IPl-eO-dBC"/>
+                                        <constraint firstAttribute="bottom" secondItem="FLn-5r-Gz6" secondAttribute="bottom" constant="15" id="IPl-eO-dBC"/>
                                         <constraint firstItem="FLn-5r-Gz6" firstAttribute="centerX" secondItem="iBN-zi-elE" secondAttribute="centerX" id="RE7-2j-s2U"/>
                                         <constraint firstItem="FLn-5r-Gz6" firstAttribute="top" secondItem="Wj5-RP-Gmi" secondAttribute="bottom" constant="20" id="ivG-pu-KvD"/>
                                         <constraint firstItem="Wj5-RP-Gmi" firstAttribute="centerX" secondItem="iBN-zi-elE" secondAttribute="centerX" id="nDV-l9-xNB"/>
