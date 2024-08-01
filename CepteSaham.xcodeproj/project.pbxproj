@@ -28,6 +28,7 @@
 		F0A7FCDD2C3C7A1A004C360A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A7FCDC2C3C7A1A004C360A /* CustomTextField.swift */; };
 		F0AC11682C31B9CC0043C7A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0AC11672C31B9CC0043C7A4 /* GoogleService-Info.plist */; };
 		F0BEE8312C4ED33D009BBF52 /* ProfileOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BEE8302C4ED33D009BBF52 /* ProfileOption.swift */; };
+		F0D8ED322C5BB873008AFCA9 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D8ED312C5BB873008AFCA9 /* NotificationTableViewCell.swift */; };
 		F0DEADED2C3D484100E71D79 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DEADEC2C3D484100E71D79 /* RegisterViewController.swift */; };
 		F0DEADEF2C3D708400E71D79 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DEADEE2C3D708400E71D79 /* SplashScreenViewController.swift */; };
 		F0DEADF12C3DB22D00E71D79 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DEADF02C3DB22D00E71D79 /* AuthService.swift */; };
@@ -68,6 +69,7 @@
 		F0A7FCDC2C3C7A1A004C360A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		F0AC11672C31B9CC0043C7A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F0BEE8302C4ED33D009BBF52 /* ProfileOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOption.swift; sourceTree = "<group>"; };
+		F0D8ED312C5BB873008AFCA9 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		F0DEADEC2C3D484100E71D79 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F0DEADEE2C3D708400E71D79 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		F0DEADF02C3DB22D00E71D79 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				F05CF7272C49AD5200995676 /* MessagesViewController.swift */,
 				F05CF7292C49AD7300995676 /* ProfileViewController.swift */,
 				F0FEA54A2C5B9FB40095B315 /* NotificationPageViewController.swift */,
+				F0D8ED312C5BB873008AFCA9 /* NotificationTableViewCell.swift */,
 				F00EE8242C4C532E009AACF4 /* CampaignsCollectionViewCell.swift */,
 				F00EE8262C4C54F1009AACF4 /* FullScreenPhotoViewController.swift */,
 				F0BEE8302C4ED33D009BBF52 /* ProfileOption.swift */,
@@ -317,6 +320,7 @@
 				F071AC442C3CA2FA00690791 /* RangeGestureRecognizer.swift in Sources */,
 				F0DEADF12C3DB22D00E71D79 /* AuthService.swift in Sources */,
 				F076B8702C3EE40400AD234E /* Alert.swift in Sources */,
+				F0D8ED322C5BB873008AFCA9 /* NotificationTableViewCell.swift in Sources */,
 				F0E6227E2C37344D0054B0F3 /* LoginPageViewController.swift in Sources */,
 				F071AC422C3C853400690791 /* PrimaryButton.swift in Sources */,
 				F0DEADF62C3DB4DB00E71D79 /* HomePageViewController.swift in Sources */,

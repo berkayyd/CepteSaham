@@ -7,15 +7,23 @@
 
 import UIKit
 
-class NotificationPageViewController: UIViewController {
-
-    @IBOutlet weak var backButton: UIButton!
+class NotificationPageViewController: UIViewController , UITableViewDataSource , UITableViewDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.setHidesBackButton(true, animated: true)
+        tableView.delegate = self
+        tableView.dataSource = self
     }
-    @IBAction func backTapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 7
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "notificationCell", for: indexPath) as? NotificationTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        return cell
     }
 }
