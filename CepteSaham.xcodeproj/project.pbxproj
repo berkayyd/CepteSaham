@@ -41,6 +41,7 @@
 		F0E6227C2C3731840054B0F3 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = F0E6227B2C3731840054B0F3 /* FirebaseAppCheck */; };
 		F0E6227E2C37344D0054B0F3 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6227D2C37344D0054B0F3 /* LoginPageViewController.swift */; };
 		F0E93F5E2C3C70C80069EE39 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E93F5D2C3C70C80069EE39 /* CustomLabel.swift */; };
+		F0FEA54B2C5B9FB40095B315 /* NotificationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FEA54A2C5B9FB40095B315 /* NotificationPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		F0E14EEF2C4961FE002A210B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CepteSaham/Base.lproj/TabBar.storyboard; sourceTree = "<group>"; };
 		F0E6227D2C37344D0054B0F3 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		F0E93F5D2C3C70C80069EE39 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		F0FEA54A2C5B9FB40095B315 /* NotificationPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				F05CF7222C49AC8100995676 /* FavouritesViewController.swift */,
 				F05CF7272C49AD5200995676 /* MessagesViewController.swift */,
 				F05CF7292C49AD7300995676 /* ProfileViewController.swift */,
+				F0FEA54A2C5B9FB40095B315 /* NotificationPageViewController.swift */,
 				F00EE8242C4C532E009AACF4 /* CampaignsCollectionViewCell.swift */,
 				F00EE8262C4C54F1009AACF4 /* FullScreenPhotoViewController.swift */,
 				F0BEE8302C4ED33D009BBF52 /* ProfileOption.swift */,
@@ -318,6 +321,7 @@
 				F071AC422C3C853400690791 /* PrimaryButton.swift in Sources */,
 				F0DEADF62C3DB4DB00E71D79 /* HomePageViewController.swift in Sources */,
 				F00EE8272C4C54F1009AACF4 /* FullScreenPhotoViewController.swift in Sources */,
+				F0FEA54B2C5B9FB40095B315 /* NotificationPageViewController.swift in Sources */,
 				F058C1402C31B84400D127C0 /* AppDelegate.swift in Sources */,
 				F0DEADEF2C3D708400E71D79 /* SplashScreenViewController.swift in Sources */,
 				F044C3F72C4405FB00F16145 /* ForgotPasswordViewController.swift in Sources */,
